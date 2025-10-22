@@ -1,0 +1,76 @@
+# .gitignore for Windows Malware Lab Tools Installer
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# PowerShell
+*.ps1~
+*.psd1~
+*.psm1~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*~
+
+# Downloaded tools (don't commit binaries)
+*.zip
+*.exe
+*.dll
+ProcessExplorer/
+Autoruns/
+
+# Testing artifacts
+test-results/
+coverage/
+*.trx
+
+# IDE and editors
+.vscode/
+.idea/
+*.code-workspace
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Documentation build artifacts
+*.pdf
+*.html
+_site/
+
+# Sensitive information
+*.env
+.env.*
+secrets.*
+credentials.*
+
+# Logs
+logs/
+*.log
+
+# Node (if we add any tooling later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if we add any tooling later)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Project-specific
+C:/Tools/
