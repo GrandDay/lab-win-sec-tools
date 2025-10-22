@@ -116,7 +116,7 @@ function Test-Administrator {
     return $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 }
 
-function Start-ElevatedProcess {
+function Invoke-ElevatedProcess {
     <#
     .SYNOPSIS
         Re-launch the script with elevated privileges
@@ -262,7 +262,7 @@ function Expand-ToolArchive {
     }
 }
 
-function Unblock-ToolFiles {
+function Unblock-ToolFile {
     <#
     .SYNOPSIS
         Unblock downloaded files to prevent security warnings
@@ -306,7 +306,7 @@ function Test-ToolInstallation {
     }
 }
 
-function Remove-TempFiles {
+function Remove-TempFile {
     <#
     .SYNOPSIS
         Clean up temporary download files
@@ -352,7 +352,7 @@ function Show-CompletionMessage {
 
 #region Main Installation Logic
 
-function Start-Installation {
+function Invoke-Installation {
     <#
     .SYNOPSIS
         Main installation workflow
@@ -373,7 +373,7 @@ function Start-Installation {
     
     # Check administrator privileges
     if (-not (Test-Administrator)) {
-        Start-ElevatedProcess
+        Invoke-ElevatedProcess
         return
     }
     
@@ -396,7 +396,7 @@ function Start-Installation {
             Expand-ToolArchive -ZipPath $tool.ZipFile -DestinationPath $tool.DestDir -ToolName $tool.Name
             
             # Unblock files
-            Unblock-ToolFiles -Path $tool.DestDir -ToolName $tool.Name
+            Unblock-ToolFile -Path $tool.DestDir -ToolName $tool.Name
             
             # Verify installation
             if (-not (Test-ToolInstallation -Path $tool.DestDir -ExecutableName $tool.Executable -ToolName $tool.Name)) {
@@ -410,7 +410,7 @@ function Start-Installation {
     }
     
     # Cleanup
-    Remove-TempFiles
+    Remove-TempFile
     
     # Final status
     if ($installSuccess) {
@@ -430,7 +430,7 @@ function Start-Installation {
 
 # Run installation
 try {
-    Start-Installation
+    Invoke-Installation
 }
 catch {
     Write-ErrorMessage "Installation failed: $_"
