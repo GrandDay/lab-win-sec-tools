@@ -306,7 +306,7 @@ function Test-ToolInstallation {
     }
 }
 
-function Remove-TempFiles {
+function Remove-TempFile {
     <#
     .SYNOPSIS
         Clean up temporary download files
@@ -410,7 +410,7 @@ function Start-Installation {
     }
     
     # Cleanup
-    Remove-TempFiles
+    Remove-TempFile
     
     # Final status
     if ($installSuccess) {
