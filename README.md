@@ -174,7 +174,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Microsoft Sysinternals** - For providing exceptional free security tools
 - Original lab design inspired by practical malware analysis techniques
-- Built with the same philosophy as [APT-Cache-Proxy-Configurator](https://github.com/GrandDay/APT-Cache-Proxy-Configurator)
 
 ## 📞 Support
 
