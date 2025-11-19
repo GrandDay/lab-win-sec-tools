@@ -1,6 +1,6 @@
 # Windows Malware Lab Tools Installer
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)](https://github.com/PowerShell/PowerShell)
 
 > **Automated installer for Windows security analysis tools required for the "Finding and Scanning Suspicious Processes for Malware in Windows 11" lab.**
@@ -114,7 +114,7 @@ Start-Process "C:\Tools\Autoruns\Autoruns64.exe" -Verb RunAs
 ## 📚 Documentation
 
 - [Detailed Installation Guide](docs/GUIDE.md) - Comprehensive setup and troubleshooting
-- [Lab Manual Reference](https://www.notion.so/feb27b10193a482c932d179cd6f7e7bb) - Original lab instructions
+- [Lab Manual Reference](https://www.notion.so/Lab-Finding-and-Scanning-Suspicious-Processes-for-Malware-in-Windows-11-feb27b10193a482c932d179cd6f7e7bb?source=copy_link) - Original lab instructions
 - [Security Best Practices](docs/SECURITY.md) - Safe usage guidelines
 
 ## 🔍 How It Works
